@@ -7,4 +7,4 @@ A http server made for streaming Melty Blood
  - [flask](https://pypi.org/project/flask/)
  - [psutil](https://pypi.org/project/psutil/)
 ## Installation
-Simply run `pip install melty-streaming`
+Simply install the dependencies and run `__init__.py` included in the `melty_streaming` folder.
