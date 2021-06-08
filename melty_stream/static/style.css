@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.border {
+    position: absolute;
+    width: 12.5%;
+    height: 100%;
+    top: 0;
+    background-color: #000000;
+    overflow: hidden;
+}
+.border.p1 {left: 0;}
+.border.p2 {right: 0;}
+
+.charnamebanner {
+    position: absolute;
+    width: 128px;
+    height: 1536px;
+    background: 0 0 no-repeat;
+    background-image: url("assets/name_banner.png");
+    transition: transform 0.5s;
+}
+.charnamebanner.p1 {right: 0; transform: translateY(-384px);}
+.charnamebanner.p1.selected {transform: translateY(0px);}
+.charnamebanner.p2 {left: 0; transform: translateY(-384px) scaleX(-1);}
+.charnamebanner.p2.selected {transform: translateY(0px) scaleX(-1);}
+
+.charname {
+    position: absolute;
+    width: 48px;
+    height: 512px;
+    bottom: 512px;
+    background: 0 0 no-repeat;
+    background-image: url("assets/name/vs_name00_00.png");
+    right: 0;
+}
+.charname.p1 {}
+.charname.p2 {transform: scaleX(-1);}
+
+.charmug {
+    position: absolute;
+    width: 900px;
+    height: 1024px;
+    bottom: 0;
+    background: 0 0 no-repeat;
+    background-image: url("assets/mug/cut_0000.png");
+    transition: transform 0.5s;
+}
+.charmug.partner {transition: transform 0.6s;}
+.charmug.p1 {transform: translateX(-900px);}
+.charmug.p1.selected {transform: translateX(0px);}
+.charmug.p2 {transform: translateX(900px) scaleX(-1); right: 0;}
+.charmug.p2.selected {transform: translateX(0px) scaleX(-1);}
+
+.charmoon {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    top: 0;
+    right: 0;
+    background: 0 0 no-repeat;
+    background-image: none;
+    filter: drop-shadow(0px 0px 8px white);
+    transition: filter 0.5s;
+}
+.charmoon.selected {filter: drop-shadow(0px 0px 0px white);}
+.charmoon.p2 {transform: scaleX(-1);}
