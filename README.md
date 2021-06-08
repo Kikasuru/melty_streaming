@@ -8,3 +8,5 @@ A http server made for streaming Melty Blood
  - [psutil](https://pypi.org/project/psutil/)
 ## Installation
 Simply install the dependencies and run `__init__.py` included in the `melty_streaming` folder.
+## Running
+The website will be hosted at ``127.0.0.1:5000``, open that in your browser or create a "Browser Source" in your OBS software.
