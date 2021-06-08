@@ -1,4 +1,4 @@
-# melty_stream
+# melty_streaming
 A http server made for streaming Melty Blood
 
 ## Dependencies
@@ -7,4 +7,4 @@ A http server made for streaming Melty Blood
  - [flask](https://pypi.org/project/flask/)
  - [psutil](https://pypi.org/project/psutil/)
 ## Installation
-Simply run `pip install melty-stream`
+Simply run `pip install melty-streaming`
