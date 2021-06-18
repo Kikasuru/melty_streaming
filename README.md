@@ -1,5 +1,6 @@
 # melty_streaming
 A http server made for streaming Melty Blood
+[Video Demonstration](https://www.youtube.com/watch?v=5g_8LMq0-JA)
 
 ## Dependencies
  - [Python 3.6.x (Could be ran on a lower version, I haven't tested it yet.)](https://www.python.org/downloads/release/python-395/)
