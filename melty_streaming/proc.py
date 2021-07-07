@@ -1,8 +1,9 @@
+import subprocess
 import ctypes
 from ctypes.wintypes import *
-import psutil
 
-MELTYBLOOD_EXECUTABLE = "MBAA.exe"
+# Grabs spefically this title, the steam version uses something different.
+MELTY_TITLE = "MELTY BLOOD Actress Again Current Code Ver.1.07*"
 
 class ProcessHook:
     """Class that hooks onto Melty Blood"""
@@ -20,9 +21,13 @@ class ProcessHook:
     @classmethod
     def get_pid(cls):
         """Grabs the PID of the Melty Blood executable"""
-        for proc in psutil.process_iter():
-            if proc.name() == MELTYBLOOD_EXECUTABLE:
-                return proc.pid
+        cmd = f"""tasklist /FI "WindowTitle eq {MELTY_TITLE}" /FO CSV /NH"""
+        task_data = subprocess.check_output(cmd, creationflags=subprocess.CREATE_NO_WINDOW).decode("UTF8")
+
+        if not task_data.startswith("INFO: "):
+            # Split the output up and grab the PID
+            pid = task_data.replace("\"", "").split(",")[1]
+            return int(pid)
         return None
 
     PROCESS_ID = None
