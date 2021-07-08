@@ -13,6 +13,8 @@ function handlePlayer(data, plr)
             // Set the mugshot of this character
             $(`#p${plr}mug`).css("background-image",
                 `url("assets/mug/cut_${charId}00.png")`);
+            $(`#p${plr}mugheat`).css("background-image",
+                `url("assets/mug/cut_${charId}00.png")`);
 
             // Set if this mugshot is selected
             $(`#p${plr}mug`).toggleClass("selected", true);
@@ -22,6 +24,8 @@ function handlePlayer(data, plr)
             if([0x04, 0x22, 0x23].includes(data[`p${plr}char`])) {
                 $(`#p${plr}mugptnr`).css("background-image",
                     `url("assets/mug/cut_${charId}01.png")`);
+                $(`#p${plr}mugheat`).css("background-image",
+                    `url("assets/mug/cut_${charId}00.png"), url("assets/mug/cut_${charId}01.png")`);
                 $(`#p${plr}mugptnr`).toggleClass("selected", true);
             }
         } else {
@@ -44,6 +48,20 @@ function handlePlayer(data, plr)
             $(`#p${plr}moon`).css("background-image",
                 `none`);
         }
+
+        // Check for heat type
+        if (data[`p${plr}heat`] !== 0 && data[`gamemode`] === 1) {
+            // Heat and Max mode use the same colors
+            if (data[`p${plr}heat`] === 1 || data[`p${plr}heat`] === 2) {
+                $(`#p${plr}mugheat`).toggleClass("heatmode", true);
+            // Only other option is Blood Heat
+            } else {
+                $(`#p${plr}mugheat`).toggleClass("bloodheatmode", true);
+            }
+        } else {
+            $(`#p${plr}mugheat`).toggleClass("heatmode", false);
+            $(`#p${plr}mugheat`).toggleClass("bloodheatmode", false);
+        }
     } else {
         // Toggle the selected class off
         $(`#p${plr}mug`).toggleClass("selected", false);
@@ -57,6 +75,10 @@ function handlePlayer(data, plr)
         // Set the name to none
         $(`#p${plr}name`).css("background-image",
             `none`);
+
+        // Turn off heat modes
+        $(`#p${plr}mugheat`).toggleClass("heatmode", false);
+        $(`#p${plr}mugheat`).toggleClass("bloodheatmode", false);
     }
 }
 

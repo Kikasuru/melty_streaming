@@ -44,6 +44,101 @@ body {
 .charmug.partner {transition: transform 0.6s;}
 .charmug.selected {transform: translateX(0px);}
 
+.heat {
+    position: absolute;
+    width: 900px;
+    height: 1024px;
+    bottom: 0;
+    filter: brightness(0);
+}
+
+.heat.heatmode {animation: 0.5s linear 0s infinite running heat;}
+.heat.bloodheatmode {animation: 0.5s linear 0s infinite running bloodheat;}
+
+@keyframes heat {
+    from {
+        filter: brightness(0)
+            /* Top */
+            drop-shadow(-1px -1px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 0px -1px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 1px -1px 0px rgba(106, 0, 255, 255))
+
+            /* Middle */
+            drop-shadow(-1px  0px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 0px  0px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 1px  0px 0px rgba(106, 0, 255, 255))
+
+            /* Bottom */
+            drop-shadow(-1px  1px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 0px  1px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 1px  1px 0px rgba(106, 0, 255, 255))
+
+            opacity(100%);
+    }
+
+    to {
+        filter: brightness(0)
+            /* Top */
+            drop-shadow(-10px -10px 0px rgba(106, 0, 255, 255))
+            drop-shadow(  0px -10px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 10px -10px 0px rgba(106, 0, 255, 255))
+
+            /* Middle */
+            drop-shadow(-10px  0px 0px rgba(106, 0, 255, 255))
+            drop-shadow(  0px  0px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 10px  0px 0px rgba(106, 0, 255, 255))
+
+            /* Bottom */
+            drop-shadow(-10px  10px 0px rgba(106, 0, 255, 255))
+            drop-shadow(  0px  10px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 10px  10px 0px rgba(106, 0, 255, 255))
+
+            opacity(0%);
+    }
+}
+
+@keyframes bloodheat {
+    from {
+        filter: brightness(0)
+            /* Top */
+            drop-shadow(-1px -1px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 0px -1px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 1px -1px 0px rgba(255, 253, 120, 255))
+
+            /* Middle */
+            drop-shadow(-1px  0px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 0px  0px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 1px  0px 0px rgba(255, 253, 120, 255))
+
+            /* Bottom */
+            drop-shadow(-1px  1px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 0px  1px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 1px  1px 0px rgba(255, 253, 120, 255))
+
+            opacity(100%);
+    }
+
+    to {
+        filter: brightness(0)
+            /* Top */
+            drop-shadow(-10px -10px 0px rgba(255, 253, 120, 255))
+            drop-shadow(  0px -10px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 10px -10px 0px rgba(255, 253, 120, 255))
+
+            /* Middle */
+            drop-shadow(-10px   0px 0px rgba(255, 253, 120, 255))
+            drop-shadow(  0px   0px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 10px   0px 0px rgba(255, 253, 120, 255))
+
+            /* Bottom */
+            drop-shadow(-10px   10px 0px rgba(255, 253, 120, 255))
+            drop-shadow(  0px   10px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 10px   10px 0px rgba(255, 253, 120, 255))
+
+            opacity(0%);
+    }
+}
+
 .charmoon {
     position: absolute;
     width: 96px;
