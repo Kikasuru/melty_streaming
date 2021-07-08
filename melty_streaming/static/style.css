@@ -84,9 +84,9 @@ body {
             drop-shadow( 10px -10px 0px rgba(106, 0, 255, 255))
 
             /* Middle */
-            drop-shadow(-10px  0px 0px rgba(106, 0, 255, 255))
-            drop-shadow(  0px  0px 0px rgba(106, 0, 255, 255))
-            drop-shadow( 10px  0px 0px rgba(106, 0, 255, 255))
+            drop-shadow(-10px   0px 0px rgba(106, 0, 255, 255))
+            drop-shadow(  0px   0px 0px rgba(106, 0, 255, 255))
+            drop-shadow( 10px   0px 0px rgba(106, 0, 255, 255))
 
             /* Bottom */
             drop-shadow(-10px  10px 0px rgba(106, 0, 255, 255))
@@ -131,9 +131,9 @@ body {
             drop-shadow( 10px   0px 0px rgba(255, 253, 120, 255))
 
             /* Bottom */
-            drop-shadow(-10px   10px 0px rgba(255, 253, 120, 255))
-            drop-shadow(  0px   10px 0px rgba(255, 253, 120, 255))
-            drop-shadow( 10px   10px 0px rgba(255, 253, 120, 255))
+            drop-shadow(-10px  10px 0px rgba(255, 253, 120, 255))
+            drop-shadow(  0px  10px 0px rgba(255, 253, 120, 255))
+            drop-shadow( 10px  10px 0px rgba(255, 253, 120, 255))
 
             opacity(0%);
     }
