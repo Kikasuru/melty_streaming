@@ -8,18 +8,6 @@ function handlePlayer(data, plr)
         $(`#p${plr}name`).css("background-image",
             `url("assets/name/vs_name00_${charId}.png")`);
 
-        // Nothing Selected
-        if(data[`p${plr}selmode`] >= 0) {
-            // Toggle the selected class off
-            $(`#p${plr}mug`).toggleClass("selected", false);
-            $(`#p${plr}bnr`).toggleClass("selected", false);
-            $(`#p${plr}mugptnr`).toggleClass("selected", false);
-
-            $(`#p${plr}moon`).toggleClass("selected", false);
-            $(`#p${plr}moon`).css("background-image",
-                `none`);
-        }
-
         // Character Selected
         if(data[`p${plr}selmode`] > 0) {
             // Set the mugshot of this character
@@ -36,6 +24,11 @@ function handlePlayer(data, plr)
                     `url("assets/mug/cut_${charId}01.png")`);
                 $(`#p${plr}mugptnr`).toggleClass("selected", true);
             }
+        } else {
+            // Toggle the selected class off
+            $(`#p${plr}mug`).toggleClass("selected", false);
+            $(`#p${plr}bnr`).toggleClass("selected", false);
+            $(`#p${plr}mugptnr`).toggleClass("selected", false);
         }
 
         // Moon Selected
@@ -46,6 +39,10 @@ function handlePlayer(data, plr)
 
             // Set if the moon is selected
             $(`#p${plr}moon`).toggleClass("selected", true);
+        } else {
+            $(`#p${plr}moon`).toggleClass("selected", false);
+            $(`#p${plr}moon`).css("background-image",
+                `none`);
         }
     } else {
         // Toggle the selected class off
