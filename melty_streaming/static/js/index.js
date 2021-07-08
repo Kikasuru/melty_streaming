@@ -51,12 +51,12 @@ function handlePlayer(data, plr)
 
         // Check for heat type
         if (data[`p${plr}heat`] !== 0 && data[`gamemode`] === 1) {
-            // Heat and Max mode use the same colors
-            if (data[`p${plr}heat`] === 1 || data[`p${plr}heat`] === 2) {
-                $(`#p${plr}mugheat`).toggleClass("heatmode", true);
-            // Only other option is Blood Heat
-            } else {
+            // Check if the character is in Blood Heat
+            if (data[`p${plr}heat`] === 3) {
                 $(`#p${plr}mugheat`).toggleClass("bloodheatmode", true);
+            // Heat and Max mode use the same colors
+            } else {
+                $(`#p${plr}mugheat`).toggleClass("heatmode", true);
             }
         } else {
             $(`#p${plr}mugheat`).toggleClass("heatmode", false);
