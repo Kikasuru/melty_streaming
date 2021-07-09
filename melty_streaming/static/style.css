@@ -52,8 +52,8 @@ body {
     filter: brightness(0);
 }
 
-.heat.heatmode {animation: 0.5s linear 0s infinite running heat; color: rgba(106, 0, 255, 255);}
-.heat.bloodheatmode {animation: 0.5s linear 0s infinite running heat; color: rgba(255, 253, 120, 255);}
+.heat.heatmode {animation: 0.5s linear 0s infinite running heat; color: #6A00FF;}
+.heat.bloodheatmode {animation: 0.5s linear 0s infinite running heat; color: #FFFD78;}
 
 @keyframes heat {
     from {
