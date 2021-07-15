@@ -52,6 +52,8 @@ body {
     filter: brightness(0);
 }
 
+.heat.p2 {z-index: -1;}
+
 .heat.heatmode {animation: 0.5s linear 0s infinite running heat; color: #6A00FF;}
 .heat.bloodheatmode {animation: 0.5s linear 0s infinite running heat; color: #FFFD78;}
 
