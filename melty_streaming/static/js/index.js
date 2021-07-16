@@ -84,7 +84,7 @@ function handlePlayer(data, plr)
 
 
 /* LEAVE THESE ALONE IF YOU DON'T KNOW WHAT YOU'RE DOING */
-apiClock = null;
+clockActive = false;
 pulling = false;
 
 function clockTick()
@@ -105,19 +105,21 @@ function clockTick()
             pulling = false;
         });
     }
+    
+    if (clockActive) {
+        window.requestAnimationFrame(clockTick);
+    }
 }
 
 function startClock()
 {
-    if (apiClock === null) {
-        apiClock = setInterval(clockTick, 16);
+    if (!clockActive) {
+        clockActive = true;
+        window.requestAnimationFrame(clockTick);
     }
 }
 
 function stopClock()
 {
-    if (apiClock !== null) {
-        clearInterval(apiClock);
-        apiClock = null;
-    }
+    clockActive = false;
 }
