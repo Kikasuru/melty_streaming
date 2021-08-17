@@ -4,7 +4,7 @@ A http server made for streaming Melty Blood
 [Video Demonstration](https://www.youtube.com/watch?v=5g_8LMq0-JA)
 
 ## Dependencies
- - [Python 3.7.x or higher](https://www.python.org/downloads/release/python-396/)
+ - [Python 3.6.x or higher](https://www.python.org/downloads/release/python-396/) (3.9.6 is highly recommended.)
  - [flask](https://pypi.org/project/flask/)
 
 ## Installation

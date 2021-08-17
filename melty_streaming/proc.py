@@ -22,7 +22,7 @@ class ProcessHook:
     def get_pid(cls):
         """Grabs the PID of the Melty Blood executable"""
         cmd = f"""tasklist /FI "WindowTitle eq {MELTY_TITLE}" /FO CSV /NH"""
-        task_data = subprocess.check_output(cmd, creationflags=subprocess.CREATE_NO_WINDOW).decode("UTF8")
+        task_data = subprocess.check_output(cmd, creationflags=0x08000000).decode("UTF8")
 
         if not task_data.startswith("INFO: "):
             # Split the output up and grab the PID
