@@ -1,5 +1,5 @@
 # melty_streaming
-A http server made for streaming Melty Blood
+A dynamic border for Melty Blood Actress Again: Current Code!
 
 [Video Demonstration](https://www.youtube.com/watch?v=5g_8LMq0-JA)
 
