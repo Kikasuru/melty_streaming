@@ -14,7 +14,7 @@
 		if (!pulling) {
 			// Pull from the API
 			pulling = true;
-			get("http://127.0.0.1:8080/state")
+			get("state")
 			.then(res => {
 				player1Border.updateData(res.data, 1);
 				player2Border.updateData(res.data, 2);
