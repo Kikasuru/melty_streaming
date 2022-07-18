@@ -1,0 +1,20 @@
+gamemode: 54EEE8
+
+p1 selmode: 74D8EC
+p1 char: 74D8FC
+p1 moon: 74D900
+p1 color: 74D904
+p1 heat: 555218
+
+p2 selmode: 74D910
+p2 char: 74D920
+p2 moon: 74D924
+p2 color: 74D928
+p2 heat: 555D14
+
+camera x: 564B14
+camera y: 564B18
+camera zoom (float): 54EB70
+
+max camera x: 26624
+max camera y: -43520

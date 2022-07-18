@@ -1,0 +1,15 @@
+{
+	"stateInfo": [
+		{ "key": "gamemode", "location": 5566184, "size": 1 },
+
+		{ "key": "p1selmode", "location": 7657708, "size": 1 },
+		{ "key": "p1char", "location": 7657724, "size": 1 },
+		{ "key": "p1moon", "location": 7657728, "size": 1 },
+		{ "key": "p1heat", "location": 5591576, "size": 1 },
+
+		{ "key": "p2selmode", "location": 7657744, "size": 1 },
+		{ "key": "p2char", "location": 7657760, "size": 1 },
+		{ "key": "p2moon", "location": 7657764, "size": 1 },
+		{ "key": "p2heat", "location": 5594388, "size": 1 }
+	]
+}
