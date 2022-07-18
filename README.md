@@ -4,7 +4,7 @@ A dynamic border for Melty Blood Actress Again: Current Code!
 [Video Demonstration](https://www.youtube.com/watch?v=5g_8LMq0-JA) (Old)
 
 ## Dependencies
- - [Python 3.6.x or higher](https://www.python.org/downloads/release/python-397/) (3.9.7 is highly recommended.)
+ - [Python 3.6.x or higher](https://www.python.org/downloads/release/python-397/)
  - [Node.JS 16.16.0 LTS](https://nodejs.org/en/)
 
 ## Installation
