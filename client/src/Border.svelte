@@ -31,12 +31,12 @@
 		// Format the character ID for images.
         let charId = char.toString().padStart(2, "0");
 
-		nameImg = `url("assets/name/vs_name00_${charId}.png")`
-		mug0Img = `url("assets/mug/cut_${charId}00.png")`
+		nameImg = `url("name/vs_name00_${charId}.png")`
+		mug0Img = `url("mug/cut_${charId}00.png")`
 		// Only apply the second mugshot if the player is using a puppet character.
-		if ( [0x04, 0x22, 0x23].includes( char ) ) mug1Img = `url("assets/mug/cut_${charId}01.png")`
+		if ( [0x04, 0x22, 0x23].includes( char ) ) mug1Img = `url("mug/cut_${charId}01.png")`
 		else mug1Img = 'none'
-		moonImg = `url("assets/moon/moon_${moon}.png")`
+		moonImg = `url("moon/moon_${moon}.png")`
 	}
 </script>
 
@@ -99,7 +99,7 @@
 			position: absolute;
 			width: 128px;
 			height: 1536px;
-			background-image: url("name_banner.png");
+			background-image: url("/name_banner.png");
 			transition: transform 0.5s;
 			right: 0;
 			transform: translateY(-384px);

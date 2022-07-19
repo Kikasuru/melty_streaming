@@ -1,7 +1,7 @@
 <script lang="ts">
 	import get from 'axios'
 	import { onMount } from 'svelte';
-	import Border from './lib/Border.svelte';
+	import Border from './Border.svelte';
 
 	let player1Border: Border;
 	let player2Border: Border;
